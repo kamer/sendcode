@@ -1,0 +1,51 @@
+body {
+
+    background-color: #181E27;
+}
+
+.row-landing {
+    margin-top: 15%;
+}
+
+.div-landing-message {
+
+    border-left: 3px #E80D3E solid;
+    padding-left: 15px;
+    color: #ffffff;
+}
+
+.div-landing-message > .title {
+
+    font-size: 30px;
+}
+
+.div-landing-message > .body {
+
+    font-size: 15px;
+}
+
+.div-landing-message > .body > p > a {
+    color: white;
+}
+
+.div-landing-message > .body > p > a:hover {
+    color: white;
+}
+
+.row-new-code {
+    margin-top: 1%;
+}
+
+#code-content-input {
+    height: 70vh;
+}
+
+.form-group > label {
+    color: white;
+}
+
+.showcode-message > p {
+    font-size: 15px;
+    color: #ffffff;
+    text-align: center;
+}

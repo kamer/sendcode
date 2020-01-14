@@ -1,0 +1,33 @@
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{layout/default_layout}">
+
+<th:block layout:fragment="additional-css"></th:block>
+
+<section layout:fragment="page-content">
+
+    <div class="container-fluid">
+
+        <div class="row row-landing">
+            <div class="col-1 col-lg-4 col"></div>
+            <div class="col-10 col-lg-4">
+                <div class="div-landing-message">
+                    <p class="title">Welcome to sendcode.me</p>
+                    <div class="body">
+                        <p>sendcode is an online free clipboard for code sharing.</p>
+                        <p>just create a url that starts with sendcode.me/ <br>(e.g. <a href="http://sendcode.me/wubbalubba">sendcode.me/wubbalubba</a> )</p>
+                        <p>write your code and save.</p>
+                        <p>next time you visit that url, code will be removed.</p>
+                        <p>please use at your own risk.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1 col-lg-4"></div>
+        </div>
+
+    </div>
+
+</section>
+
+<th:block layout:fragment="additional-js"></th:block>
+
+</html>

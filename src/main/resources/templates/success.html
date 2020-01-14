@@ -1,0 +1,29 @@
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{layout/default_layout}">
+
+<th:block layout:fragment="additional-css"></th:block>
+
+<section layout:fragment="page-content">
+
+    <div class="container-fluid">
+
+        <div class="row row-landing">
+            <div class="col-1 col-lg-4 col"></div>
+            <div class="col-10 col-lg-4">
+                <div class="div-landing-message">
+                    <p class="title">Your link is ready!</p>
+                    <div class="body">
+                        <p>You can access your code on <a th:href="@{'http://sendcode.me/' + ${path}}" th:text="'http://sendcode.me/' + ${path}"></a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1 col-lg-4"></div>
+        </div>
+
+    </div>
+
+</section>
+
+<th:block layout:fragment="additional-js"></th:block>
+
+</html>

@@ -1,0 +1,35 @@
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{layout/default_layout}">
+
+<th:block layout:fragment="additional-css">
+    <link type="text/css" rel="stylesheet" th:href="@{css/prism.css}"/>
+</th:block>
+
+<section layout:fragment="page-content">
+
+    <div class="container-fluid">
+
+        <div class="row row-new-code">
+            <div class="col-1 col-lg-2"></div>
+            <div class="col-10 col-lg-8">
+                <div class="showcode-message">
+                    Here's your code.
+                    <p>DON'T FORGET!</p>
+                    <P>This code is removed from database.</P>
+                </div>
+                <pre>
+                    <code th:class="'language-' + ${code.language}" th:text="${code.content}"></code>
+                </pre>
+            </div>
+            <div class="col-1 col-lg-2"></div>
+        </div>
+
+    </div>
+
+</section>
+
+<th:block layout:fragment="additional-js">
+    <script th:src="@{/js/prism.js}" type="application/javascript"></script>
+</th:block>
+
+</html>

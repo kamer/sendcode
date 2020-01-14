@@ -1,0 +1,42 @@
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{layout/default_layout}">
+
+<th:block layout:fragment="additional-css">
+
+</th:block>
+
+<section layout:fragment="page-content">
+
+    <div class="container-fluid">
+
+        <div class="row row-new-code">
+            <div class="col-1 col-lg-2 col"></div>
+            <div class="col-10 col-lg-8">
+                <form th:action="@{'/' + ${path}}" th:method="post" th:object="${code}">
+                    <div class="form-group">
+                        <label for="code-content-input">Enter your code</label>
+                        <textarea class="form-control" id="code-content-input" th:field="*{content}" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="lang-select-input">Select Language</label>
+                        <select class="form-control selectpicker lang-picker" id="lang-select-input" th:field="*{language}" data-live-search="true" size="5" required>
+                            <option th:each="language: ${languages}" th:text="${language.value}" th:value="${language.key}" th:datatokens="${#strings.toLowerCase(language.value)}"></option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Save</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-1 col-lg-2"></div>
+        </div>
+
+    </div>
+
+</section>
+
+<th:block layout:fragment="additional-js">
+    <script th:src="@{/js/new_code.js}" type="application/javascript"></script>
+</th:block>
+
+</html>

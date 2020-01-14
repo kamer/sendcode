@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>sendcode | free online clipboard for code sharing</title>
+        <meta name="description" content="Free online temporary clipboard for code sharing.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <link type="text/css" rel="stylesheet" th:href="@{css/bootstrap-4.4.1/bootstrap.css}"/>
+        <link type="text/css" rel="stylesheet" th:href="@{css/bootstrap-4.4.1/bootstrap-grid.css}"/>
+        <link type="text/css" rel="stylesheet" th:href="@{css/bootstrap-select/bootstrap-select.css}"/>
+        <link type="text/css" rel="stylesheet" th:href="@{css/normalize.css}"/>
+        <link type="text/css" rel="stylesheet" th:href="@{css/common.css}"/>
+
+        <th:block layout:fragment="additional-css"></th:block>
+    </head>
+    <body>
+
+        <section layout:fragment="page-content" class="container-fluid"></section>
+
+        <script th:src="@{/js/popper.min.js}" type="text/javascript"></script>
+        <script th:src="@{/js/jquery-3.4.1.js}" type="text/javascript"></script>
+        <script th:src="@{/js/bootstrap-4.4.1/bootstrap.js}" type="text/javascript"></script>
+        <script th:src="@{/js/bootstrap-select/bootstrap-select.js}" type="text/javascript"></script>
+        <th:block layout:fragment="additional-js"></th:block>
+    </body>
+</html>
