@@ -1,22 +1,3 @@
-server:
-  port: 8080
 spring:
-  datasource:
-    driverClassName: org.postgresql.Driver
-    username: sendcode
-    password: sendcode
-    platform: postgres
-    url: jdbc:postgresql://localhost:5432/sendcode
-  jpa:
-    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
-    hibernate:
-      ddl-auto: update
-    properties:
-      hibernate:
-        show_sql: true
-        use_sql_comments: true
-        jdbc:
-          time_zone: UTC+3
-logging:
-  level:
-    org.hibernate.SQL: debug
+  profiles:
+    active: dev
