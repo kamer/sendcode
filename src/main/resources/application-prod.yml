@@ -1,0 +1,24 @@
+server:
+  port: 8088
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    username:
+    password:
+    platform: postgres
+    url:
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments: true
+        jdbc:
+          time_zone: UTC+3
+logging:
+  level:
+    org.hibernate.SQL: debug
+env:
+  var:
