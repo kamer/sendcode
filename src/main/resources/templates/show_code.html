@@ -2,7 +2,7 @@
       layout:decorate="~{layout/default_layout}">
 
 <th:block layout:fragment="additional-css">
-    <link type="text/css" rel="stylesheet" th:href="@{css/prism.css}"/>
+    <link href="https://myCDN.com/prism@v1.x/themes/prism.css" rel="stylesheet"/>
 </th:block>
 
 <section layout:fragment="page-content">
@@ -29,7 +29,8 @@
 </section>
 
 <th:block layout:fragment="additional-js">
-    <script th:src="@{/js/prism.js}" type="application/javascript"></script>
+    <script src="https://myCDN.com/prism@v1.x/components/prism-core.min.js"></script>
+    <script src="https://myCDN.com/prism@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
 </th:block>
 
 </html>
